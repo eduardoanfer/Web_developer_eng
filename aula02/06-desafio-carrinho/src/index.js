@@ -22,7 +22,9 @@ console.log("Shoppe cart Total:  ");
 await cardServices.calcularTotal(mycart); // calcula o total do carrinho
 console.log("Favorite List Total:  ");
 await cardServices.calcularTotal(myFavoriteList);
-await cardServices.deleteItemToCard(mycart,item2)   // deleta um item do carrinho]
-console.log("Shoppe cart Total: ");
-await cardServices.calcularTotal(mycart); // calcula o total do carrinho
+// deletei itens do carrinho 
+await cardServices.deleteItemToCard(mycart,item2)   // deleta um item do carrinho
+await cardServices.displayCard(mycart);
+
+
 

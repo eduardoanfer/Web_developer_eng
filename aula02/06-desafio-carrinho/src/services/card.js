@@ -33,10 +33,25 @@ async function removeItemToCard(userCard, index){
     return userCard; // retorna o carrinho
 
 }
+async function displayCard(userCard) {
+    console.log("Shoppe Card List:  ");
+    userCard.forEach((item, index ) => {
+        console.log("-------------------------------");
+        console.log(`Item: ${index + 1} ---- ${item.name} `);
+        console.log(` ---- ${item.price}---- `);
+        console.log(`Quantidade:  ---- ${item.quantity}---- `);
+        console.log(`Subtotal: ${item.subtotal()} `);
+        console.log("-------------------------------");
+    })
+    
+    // peguei um valor guardei na variavel index ((item, index))
+}
+
 // calcular o total
 export{ 
     addItemToCart,
     deleteItemToCard,
     removeItemToCard,
-    calcularTotal
+    calcularTotal, 
+    displayCard
 }
